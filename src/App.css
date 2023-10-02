@@ -1,0 +1,150 @@
+#root {
+  max-width: 1280px;
+  text-align: center;
+  display: contents;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.grid-item {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+@media (max-width: 767px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.main_div {
+  top: 70px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wallet_div {
+  top: 70px;
+  position: absolute;
+  display: grid;
+  /* grid-template-columns: 1fr 1fr; */
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.curr_div {
+  margin: 5px;
+}
+
+.graph_div {
+  width: 100%;
+  margin: 30px;
+  top: 90px;
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.graph_menu {
+  margin: 20px;
+}
+
+.graph {
+  margin: 40px;
+}
+
+.container-switch {
+  display: flex;
+  place-items: center;
+}
+.switch {
+  margin-top: 5.4px;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.loader__circle {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  margin: 0 4px;
+  animation: loader_901 1s ease-in-out infinite;
+}
+
+.loader__circle:nth-of-type(1) {
+  background-color: #007aff;
+  animation-delay: 0;
+}
+
+.loader__circle:nth-of-type(2) {
+  background-color: #ff2d55;
+  animation-delay: 0.25s;
+}
+
+.loader__circle:nth-of-type(3) {
+  background-color: #34c759;
+  animation-delay: 0.5s;
+}
+
+.loader__circle:nth-of-type(4) {
+  background-color: #ff9500;
+  animation-delay: 0.75s;
+}
+
+@keyframes loader_901 {
+  0% {
+    transform: scale(1);
+  }
+
+  20% {
+    transform: scale(1.2);
+  }
+
+  40% {
+    transform: scale(1);
+  }
+}
