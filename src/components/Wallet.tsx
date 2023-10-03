@@ -1,7 +1,7 @@
 import { useQuery } from 'react-query';
 import { useState } from 'react';
 import axios from 'axios';
-import { WalletProps } from '../types/types';
+import { HomeProps } from '../types/types';
 
 async function fetchRate(
   currency: string,
@@ -14,7 +14,7 @@ async function fetchRate(
   return data;
 }
 
-export default function Wallet({ currencies }: WalletProps): React.JSX.Element {
+export default function Wallet({ currencies }: HomeProps): React.JSX.Element {
   const [currency, setCurrency] = useState<string>('EUR');
   const [targetCurrency, settargetCurrency] = useState<string>('USD');
   const [quantity, setQuantity] = useState<string>('');

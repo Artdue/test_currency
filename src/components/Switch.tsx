@@ -1,4 +1,4 @@
-import { ChangeEvent, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 type ChangeEvent = React.ChangeEvent<HTMLInputElement>;
 type Theme = 'dark' | 'light';
 

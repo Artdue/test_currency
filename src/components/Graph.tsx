@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useState } from 'react';
 import { useQuery } from 'react-query';
-import { GraphProps } from '../types/types';
+import { GraphProps, IChartData } from '../types/types';
 import { Chart } from './Chart';
 
 async function fetchRate(
@@ -45,7 +45,7 @@ function Graph({ dataKeys }: GraphProps) {
     return <h3>Нет данных</h3>;
   }
 
-  const currData = Object.entries(data.rates);
+  const currData: IChartData[] = Object.entries(data.rates);
 
   return (
     <div className='graph_div'>
@@ -79,7 +79,7 @@ function Graph({ dataKeys }: GraphProps) {
         />
       </div>
       <div className='graph'>
-        <Chart data={currData as [string, unknown][]} />
+        <Chart currData={currData as unknown as IChartData[]} />
       </div>
     </div>
   );
